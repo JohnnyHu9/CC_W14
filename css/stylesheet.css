@@ -1,5 +1,12 @@
+/*
+File name : stylesheet.css
+Author's name : Zhixiang Hu
+Web site name : Zhixiang Hu Tech Space
+This is the main css style file of the web site
+*/
 body{
 	width:50em;
+    font-family:Arial;
 }
 
 h2{
@@ -14,13 +21,24 @@ div{
 }
 
 #header{
-	height:6.5em;
+	height:7em;
 	background-color:#0099FF;
 	border-radius:20px;
 	margin-bottom:1em;
 }
-
-
+#sitemap{
+    margin-left:700px;
+    margin-top:-30px;
+    font-size:x-small;
+}
+#crumbs{
+    margin-left:10px;
+    margin-top:3px;
+    font-size:smaller;
+}
+#crumbs a{
+    font-family:'Calibri';
+}
 #topnav
 {
 	display:inline:block;
@@ -66,10 +84,68 @@ div{
     border:2px dotted;
     height:500px;
     border-radius:10px;
+    background-color:#F6D8CE;
 }
 
+#next{
+    margin-left:470px;
+    margin-top:180px;
+    width:280px;
+}
 
-#foot
-{
+#next a{
+    display:block;
+    width:240px;
+    height:50px;
+    font-size:x-large;
 
+    color:#DF3A01;
+    background-color:#F7BE81;
+    padding-top:20px;
+    padding-left:30px;
+    border-radius:20px;
+	text-decoration:none;
+}
+#keep_connected{
+    margin-left:670px;
+    margin-top:-30px;
+}
+#keep_connected a{
+    margin-right:10px;
+}
+#keep_connected2{
+    margin-left:20px;
+}
+#keep_connected2 a{
+    margin-right:10px;
+}
+
+#slide {
+    position:relative;
+    margin-left:20px;
+}
+#slide img{
+    position:absolute;
+    z-index:1;
+}
+#slide img.active{
+    z-index:3;
+}
+
+#foot{
+    margin-top:10px;
+    padding-left:230px;
+}
+
+#my_img{
+    margin-left:500px;
+    margin-top:-200px;
+}
+.demo_link{
+    display:block;
+    width:200px;
+    text-decoration:none;
+}
+.demo_link:hover{
+    background-color:#BCF5A9;
 }

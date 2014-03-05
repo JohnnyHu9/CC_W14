@@ -1,0 +1,88 @@
+<html>
+  <head>
+    <title>COMP 229 Trade Card with Javascript Lab 2014-02-01</title>
+    <link rel="stylesheet" type="Text/css" href="css/stylesheet.css"/>
+      <script type="text/javascript" src="js/main.js"></script>
+  </head>
+
+  <body>
+      <mycol id="col_left">
+          <div id="gray_container">
+              <div id="container">
+
+                  <div id="content">
+
+                      <div id="photo_div">
+                          <img id="image" src="images\image.jpg">
+                      </div>
+                      <div id="first_name">Zhixiang,Johnny</div>
+                      <div id="last_name">Hu</div>
+                  </div>
+
+              </div>
+          </div>
+
+          <div id="remark">
+              <div id="r1">
+                  Senior Developer
+              </div>
+          </div>
+
+      </mycol>
+      <mycol id="col_right">
+          <form onsubmit="return CreateTradeCard()" name="cardForm" id="cardForm">
+              <p class="inputText">
+                  First Name:
+                  <input type="text" name="firstname" />
+              </p>
+              <p>
+                  FirstName Color:
+                  <input type="radio" name="firstname_color" value="Black" checked>Black
+                  <input type="radio" name="firstname_color" value="#0000FF">Blue
+                  <input type="radio" name="firstname_color" value="White">White
+              </p>
+              <p id="firstnameMessage" class="warningMessage"></p>
+
+
+              <p class="inputText">
+                  Last Name:
+                  <input type="text" name="lastname" />
+              </p>
+              <p>
+                  LastName Color:
+                  <input type="radio" name="lastname_color" value="Red" checked>Red
+                  <input type="radio" name="lastname_color" value="#0000FF">Blue
+                  <input type="radio" name="lastname_color" value="White">White
+              </p>
+              <p id="lastnameMessage" class="warningMessage"></p>
+
+
+              <p class="inputText">
+                  Your Title:
+                  <input type="text" name="titleText" />
+              </p>
+              <p>
+                  Title Color:
+                  <input type="radio" name="title_color" value="Black" checked>Black
+                  <input type="radio" name="title_color" value="Gray">Gray
+                  <input type="radio" name="title_color" value="White">White
+              </p>
+
+              <p id="titleMessage" class="warningMessage"></p>
+
+              <p>
+                  Image URL: <input type="text" name="img_address" id="img_address"/>
+              </p>
+              <p>TOP:<input type="text" name="top" id="top" value="320"/>
+                 LEFT:<input type="text" name="left" id="left" value="222"/>
+              </p>
+
+              <input type="submit" value="Create Card" />
+              <input type="button" onclick="reDo()" value="Reset Card">
+
+          </form>
+      </mycol>
+
+  </body>
+
+</html>
