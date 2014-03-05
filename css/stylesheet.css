@@ -26,6 +26,15 @@ div{
 	border-radius:20px;
 	margin-bottom:1em;
 }
+#logo{
+    margin-top:13px;
+    margin-left:10px;
+    border-radius:5px;
+    float:left;
+}
+#my_title{
+    float:left;
+}
 #sitemap{
     margin-left:700px;
     margin-top:-30px;
@@ -133,8 +142,9 @@ div{
 }
 
 #foot{
-    margin-top:10px;
-    padding-left:230px;
+    margin-top:5px;
+    text-align:center;
+    font-size:smaller;
 }
 
 #my_img{
@@ -146,6 +156,12 @@ div{
     width:200px;
     text-decoration:none;
 }
-.demo_link:hover{
-    background-color:#BCF5A9;
+
+#contactme{
+    margin-left:20px;
+    font-size:smaller;
+}
+h5,h6{
+    margin-left:20px;
+    margin-right:20px;
 }

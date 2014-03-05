@@ -17,18 +17,14 @@
     <!--Font Icons http://fortawesome.github.io/Font-Awesome/icons/  -->
     <link href="http://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">
 
-    <!--jQuery on CND-->
-    <script src="http://code.jquery.com/jquery-1.10.1.min.js"></script>
-    <script src="http://code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
-
-    <!--User javascript file-->
-    <script type="text/javascript" src="js/main.js"></script>
 </head>
 
 <body>
     <div id="container">
         <div id='header'>
-            <h2>Zhixiang Hu's Tech Space</h2>
+            <!--Logo and Title-->
+            <img id="logo" src="index/images/logo.png" />
+            <h2 id="my_title">Zhixiang Hu's Tech Space</h2>
 
             <!--site map-->
             <div id="sitemap"><a href="sitemap.html">[+]Site Map</a></div>
@@ -51,8 +47,30 @@
 
         <div id='mainbox'>
             <h2>Contact me</h2>
+
+            <div id="contactme">
+                <form name="contact" method="post" target="_self">
+                    <table>
+                        <tr><td>Subject :</td><td><input type="text" name="subject" /></td></tr>
+                        <tr><td>Type :</td><td>
+                                               <select name="type">
+                                                   <option value="develop">Developing</option>
+                                                   <option value="bug">Bug Report</option>
+                                                   <option value="suggest">Suggestions</option>
+                                                   <option value="others">Others</option>
+                                               </select>
+                        </td></tr>
+                        <tr><td>Your Email :</td>
+                        <td><input type="text" name="email" /></td></tr>
+                        <tr><td>Content :</td><td>
+                                                  <textarea name="content" rows="4" cols="50">input your content ...
+                                                  </textarea></td></tr>
+                        <tr><td></td><td><input type="submit" value="Submit" /><input type="reset" value="Reset" /></td></tr>
+                    </table>
+                </form>
+            </div>
             <ul>
-                <li>moble : +1 647 894 6916</li>
+                <li>mobile : +1 647 894 6916</li>
                 <li>email : johnnyhu@gmail.com</li>
                 <li>address : 941 Progress Ave, Toronto, Centennial College</li>
             </ul>
@@ -67,8 +85,10 @@
         </div>
     </div>
 
-    <!--footer and copy right-->
+    <!--terms of use, privacy policy and copy right-->
     <div id='foot'>
+        <a href="term.html">Terms of Use</a> |
+        <a href="privacy.html">Privacy Policy</a> |
         Copyright 2014 by Zhixiang Hu. All Rights Reserved.
     </div>
 </body>
