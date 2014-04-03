@@ -1,12 +1,12 @@
-﻿<html>
+<html>
 <head>
     <meta name="robots" content="noindex">
     <meta name="googlebot" content="noindex">
     <!--
-        File name : index.html
+        File name : business_contact.php
         Author's name : Zhixiang Hu
         Web site name : Zhixiang Hu Tech Space
-        This is index page of the web site
+        This is business contact page of the web site
     -->
 
 
@@ -37,53 +37,25 @@
 
             <!--navigation bar-->
             <div id='topnav'>
-                <my_menu><a class="m_active" href='index.html'><i class="fa fa-home fa-lg"></i>Home</a></my_menu>
+                <my_menu><a class="m_normal" href='index.html'><i class="fa fa-home fa-lg"></i>Home</a></my_menu>
                 <my_menu><a class="m_normal" href='aboutme.html'><i class="fa fa-comment-o"></i>About Me</a></my_menu>
                 <my_menu><a class="m_normal" href='projects.html'><i class="fa fa-laptop"></i>Projects</a></my_menu>
                 <my_menu><a class="m_normal" href='services.html'><i class="fa fa-shopping-cart"></i>Services</a></my_menu>
                 <my_menu><a class="m_normal" href='https://github.com/JohnnyHu9/CC_W14' target="_blank"><i class="fa fa-cloud-download"></i>GitHub</a></my_menu>
                 <my_menu><a class="m_normal" href='contactme.html'><i class="fa fa-edit"></i>Contact Me</a></my_menu>
-                <my_menu1><a class="m_normal" href='business_contact.php'><i class="fa fa-edit"></i>Business Contact</a></my_menu>
+                <my_menu1><a class="m_active" href='business_contact.php'><i class="fa fa-edit"></i>Business Contact</a></my_menu>
             </div>
             <!--bread crumbs-->
             <div id="crumbs">
-                You are here: <a href="index.html">HOME</a>
+                You are here: <a href="index.html">HOME</a> ->
+                <a href="business_contact.php">Business Contact</a>
             </div>
         </div>
 
         <div id='mainbox'>
-            <h2>Welcome to my Tech Space.</h2>
+            <h2>Tech Space's Business Contact</h2>
             <!--keep connected panel-->
-            <div id="keep_connected">
-                <a href="https://www.facebook.com/johnny.hu.906"><img src="index\images\fb.png" alt="Facebook" /></a>
-                <a href="https://plus.google.com/112122800212496080131"><img src="index\images\gplus.png" alt="Google Plus"/></a>
-                <a href="http://ca.linkedin.com/pub/johnny-hu/55/610/47a/"><img src="index\images\in.png" alt="LinkedIn" /></a>
-            </div>
 
-            <h3>Personal Tagline</h3>
-            <ul>
-                <li>Ultimate technology fan</li>
-                <li>Combine technologies and business requirements</li>
-                <li>Create excellent user experience</li>
-            </ul>
-
-            <!--projects images toggle-->
-            <div id="slide">
-                <a href="projects\demo1_trade_card\index.html">
-                    <img class="active" src="index\images\demo1.png" alt="Demo 1, HTML + CSS" />
-                </a>
-                <a href="projects\demo2_js_trade_card\index.html">
-                    <img id="img2" src="index\images\demo2.png" alt="Demo 2, HTML + Javascript" />
-                </a>
-                <a href="projects\demo3_jQuery_trade_card\index.html">
-                    <img id="img3" src="index\images\demo3.png" alt="Demo 3, HTML + jQuery" />
-                </a>
-            </div>
-
-
-            <div id="next">
-                <a href="projects.html">Look at my works. <i class="fa fa-arrow-circle-right fa-lg"></i></a>
-            </div>
         </div>
 
 

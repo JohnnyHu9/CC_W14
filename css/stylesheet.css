@@ -5,7 +5,7 @@ Web site name : Zhixiang Hu Tech Space
 This is the main css style file of the web site
 */
 body{
-	width:50em;
+	width:55em;
     font-family:Arial;
 }
 
@@ -36,7 +36,7 @@ div{
     float:left;
 }
 #sitemap{
-    margin-left:700px;
+    margin-left:800px;
     margin-top:-30px;
     font-size:x-small;
 }
@@ -63,10 +63,20 @@ div{
 {
 	float:left;
 	height: 32px;
-	width:16.1%;
+	width: 13.8%;
 	text-align:center;
 	border: 1px solid #080808; 
-    margin:1px;	
+	margin:1px;	
+}
+#topnav my_menu1
+{
+	font-size: smaller;
+	float:left;
+	height: 32px;
+	width: 13.8%;
+	text-align:center;
+	border: 1px solid #080808; 
+	margin:1px;
 }
 .m_active{
 	display:block;
@@ -86,6 +96,9 @@ div{
 	color:#4D4D4D;
 }
 #topnav my_menu a:hover{
+	background-color:#F6D8CE;
+}
+#topnav my_menu1 a:hover{
 	background-color:#F6D8CE;
 }
 
