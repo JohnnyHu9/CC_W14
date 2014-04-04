@@ -86,6 +86,7 @@
                     
                     //list contact
                     ?>
+                    <!--Contact List on the left-->
                     <mycol id="col_left">
                     <h2>Contact List</h2>
                     <?php
@@ -121,6 +122,7 @@
                     }
                         ?>
                     </mycol>
+                    <!--Contact Detail on the right-->
                     <mycol id="col_right">
                     <h2>Contact Detail</h2>
                         <table border=1 cellpadding=0 cellspacing=0>
