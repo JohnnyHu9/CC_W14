@@ -141,7 +141,7 @@
                 }
             }
             else{
-                echo "post not found";
+                //echo "post not found";
                 $_SESSION["username"] = '';
                 $_SESSION["isloggedin"] = false;
             }
@@ -149,7 +149,7 @@
             if(isset($_SESSION["isloggedin"])){
                 if($_SESSION["isloggedin"])
                 {
-                        echo "welcome " . $_SESSION["username"];    // login succeed
+                        echo "Welcome " . $_SESSION["username"] . '.  <a href=logout.php>Logout</a>';    // login succeed
                 }
                 else    // display login input form
                 {?> <h5>Login Required. Only Authorized User Can See Contact.</h5>
