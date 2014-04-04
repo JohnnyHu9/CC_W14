@@ -54,8 +54,73 @@
 
         <div id='mainbox'>
             <h2>Tech Space's Business Contact</h2>
-            <!--keep connected panel-->
 
+            <?php
+            session_start();
+            if(isset($_POST["username"]))
+            {
+                //echo $_POST["username"];echo $_POST["password"];
+                
+                $dsn = 'mysql:host=127.0.0.1;dbname=test';
+                $username = 'player';
+                $password = 'password';
+                $db = new PDO($dsn, $username, $password);  // set database object
+                $salt = "123456789";
+                $pepper = "abcdefgh";
+                
+                $password = sha1($salt) . $_POST["password"] . sha1($pepper);
+                //echo $password."<br>";
+                $password = sha1($password);    // hash password with salt and pepper
+                //echo $password."<br>";
+                
+                $query="select password from admin_table where UName='" . $_POST["username"] . "'";
+                $records = $db->query($query);  // query hash code from database
+                $result = $records->fetch();    // fetch query result
+                if ($result[0] == $password)    // compare with user input password
+                {
+                    $_SESSION["isloggedin"] = true; // set session login flag to true
+                    $_SESSION["username"] = $_POST["username"]; // set session variable username
+                }
+                else{
+                    echo "Authentication Failed. Please Try Again.";
+                    $_SESSION["isloggedin"] = false;    // set session login flag to false
+                    $_SESSION["username"] = "";     // clear session username
+                }
+            }
+            else{
+                echo "post not found";
+                $_SESSION["username"];
+                $_SESSION["isloggedin"] = false;
+            }
+            
+            if(isset($_SESSION["isloggedin"])){
+                if($_SESSION["isloggedin"])
+                {
+                        echo "welcome " . $_SESSION["username"];    // login succeed
+                }
+                else    // display login input form
+                {?> Login Required. Only Authorized User Can See Contact.
+                    <form action="business_contact.php" method="post">
+                    Username: <input type="text" name="username">
+                    Password: <input type="password" name="password">
+                    <input type="submit" value="Login">
+                    </form>
+                <?php
+                }
+            }
+            else    // display login input form
+            {?> Login Required. Only Authorized User Can See Contact.
+                <form action="business_contact.php" method="post">
+        	Username: <input type="text" name="username">
+        	Password: <input type="password" name="password">
+        	<input type="submit" value="Login">
+                </form>
+            <?php
+            }
+            ?>
+
+            
+            
         </div>
 
 
