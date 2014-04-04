@@ -23,6 +23,9 @@
 
     <!--User javascript file-->
     <script type="text/javascript" src="js/main.js"></script>
+
+    <script type="text/javascript" src="js/contact.js"></script>
+
 </head>    
 
 <body>
@@ -80,16 +83,66 @@
                 {
                     $_SESSION["isloggedin"] = true; // set session login flag to true
                     $_SESSION["username"] = $_POST["username"]; // set session variable username
+                    
+                    //list contact
+                    ?>
+                    <mycol id="col_left">
+                    <h2>Contact List</h2>
+                    <?php
+                    $dsn = 'mysql:host=127.0.0.1;dbname=test';
+                    $username = 'player';
+                    $password = 'password';
+                    
+                    $db = new PDO($dsn, $username, $password);
+                    
+                    $query = "Select count(*) from contact";
+                    $records = $db->query($query);
+                    $row = $records->fetch();
+                    $num_row = $row[0]; 
+                    
+                    $query = "Select ID,Name from contact order by Name";
+                    $records = $db->query($query);
+                    
+                    if ($num_row > 0)
+                    {   // show table when there is player
+                        ?>
+                        <table border=1 cellpadding=0 cellspacing=0>
+                        <?php
+                        echo "<tr><td class='td_contact'> Name </td></tr>";    
+                        foreach($records as $row)
+                        {
+                            //echo row['Name'];
+                            echo "<tr><td class='td_contact'><p class='show_button' onclick='LoadContact(" . $row['ID']. ");'>"  . $row['Name'] . "</p></td></tr>";
+                        }
+                        ?>
+                        </table>
+                        <?php
+                        echo "<br>list completed, " .  $num_row .  " contact(s) found.";
+                    }
+                        ?>
+                    </mycol>
+                    <mycol id="col_right">
+                    <h2>Contact Detail</h2>
+                        <table border=1 cellpadding=0 cellspacing=0>
+                            <tr><td class='detail_left'>Name</td><td class='detail_right'><p id='d_name'></p></td></tr>
+                            <tr><td class='detail_left'>Organization</td><td class='detail_right'><p id='d_org'></p></td></tr>
+                            <tr><td class='detail_left'>Contact Number</td><td class='detail_right'><p id='d_number'></p></td></tr>
+                            <tr><td class='detail_left'>Address</td><td class='detail_right'><p id='d_address'></p></td></tr>
+                            <tr><td class='detail_left'>Postal</td><td class='detail_right'><p id='d_postal'></p></td></tr>
+                        </table>
+                    </mycol>
+                    
+                <?php
                 }
                 else{
-                    echo "Authentication Failed. Please Try Again.";
+                    echo "<h5>Authentication Failed. Please Try Again.</h5><br>";
                     $_SESSION["isloggedin"] = false;    // set session login flag to false
                     $_SESSION["username"] = "";     // clear session username
                 }
             }
             else{
                 echo "post not found";
-                $_SESSION["username"];
+                $_SESSION["username"] = '';
                 $_SESSION["isloggedin"] = false;
             }
             
@@ -99,20 +152,20 @@
                         echo "welcome " . $_SESSION["username"];    // login succeed
                 }
                 else    // display login input form
-                {?> Login Required. Only Authorized User Can See Contact.
+                {?> <h5>Login Required. Only Authorized User Can See Contact.</h5>
                     <form action="business_contact.php" method="post">
-                    Username: <input type="text" name="username">
-                    Password: <input type="password" name="password">
+                    Username: <input type="text" name="username"> <br><br>
+                    Password: <input type="password" name="password"><br><br>
                     <input type="submit" value="Login">
                     </form>
                 <?php
                 }
             }
             else    // display login input form
-            {?> Login Required. Only Authorized User Can See Contact.
+            {?> <h5>Login Required. Only Authorized User Can See Contact.</h5>
                 <form action="business_contact.php" method="post">
-        	Username: <input type="text" name="username">
-        	Password: <input type="password" name="password">
+        	Username: <input type="text" name="username"><br><br>
+        	Password: <input type="password" name="password"><br><br>
         	<input type="submit" value="Login">
                 </form>
             <?php

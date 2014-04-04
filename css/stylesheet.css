@@ -178,3 +178,35 @@ h5,h6{
     margin-left:20px;
     margin-right:20px;
 }
+
+mycol{    	float:left; margin-left:30px;}
+#col_left{
+	text-align: center;
+    border:  solid;
+    padding: 10px;
+}
+#col_right{
+}
+
+.show_button{
+    background-color:#00ff21;
+    border-radius:5px;
+    width: 150px;
+    margin: auto;
+}
+.td_contact{
+	text-align: center;
+	width: 200px;
+	height:30px;
+}
+
+#d_name,#d_org,#d_number,#d_address,#d_postal{
+	width: 200px;
+	text-align: right;
+}
+#detail_left{
+	text-align: center;
+}
+form{
+	margin-left: 20px;
+}
